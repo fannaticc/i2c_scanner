@@ -5,7 +5,7 @@
  * Created on 24 de Dezembro de 2016, 02:06
  */
 
-// This program is based on: 
+// This program is based on: https://playground.arduino.cc/Main/I2cScanner/
 // Ported by: Raphael Pereira
 // https://github.com/fannaticc/i2c_scanner
 
