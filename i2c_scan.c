@@ -13,13 +13,16 @@
 
 uint8_t I2C_TestADR(uint8_t addr)
 {
-    uint8_t val, m, error;
+    uint8_t val;
+    uint8_t m;
+    uint8_t error;
     
     ssda_hi;
     sscl_hi;
+    
     __delay_ms(1);
     
-        ssda_lo;
+    ssda_lo;
     I2C_Wait();
     sscl_lo;
     I2C_Wait();
@@ -85,5 +88,5 @@ void I2C_Wait_Clk(void)
 
 void I2C_Wait(void)
 {
-    for(volatile uint8_t t = i2c_wait_val; t > 0; t--);
+    NOP(); //for(volatile uint8_t t = i2c_wait_val; t > 0; t--);
 }
