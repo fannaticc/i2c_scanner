@@ -4169,13 +4169,16 @@ void I2C_Wait(void);
 
 uint8_t I2C_TestADR(uint8_t addr)
 {
-    uint8_t val, m, error;
+    uint8_t val;
+    uint8_t m;
+    uint8_t error;
 
     {TRISCbits.RC4 = 1;};
     {TRISCbits.RC3 = 1;};
+
     _delay((unsigned long)((1)*(8000000/4000.0)));
 
-        {TRISCbits.RC4 = 0;};
+    {TRISCbits.RC4 = 0;};
     I2C_Wait();
     {TRISCbits.RC3 = 0;};
     I2C_Wait();
@@ -4241,5 +4244,5 @@ void I2C_Wait_Clk(void)
 
 void I2C_Wait(void)
 {
-    for(volatile uint8_t t = 2; t > 0; t--);
+    __nop();
 }

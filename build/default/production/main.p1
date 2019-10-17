@@ -17,6 +17,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "5092 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f2520.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f2520.h: 5092: extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
 [v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
+"1708
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f2520.h: 1708:     struct {
+[s S66 :5 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S66 . TUN . PLLEN INTSRC ]
+"1714
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f2520.h: 1714:     struct {
+[s S67 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S67 . TUN0 TUN1 TUN2 TUN3 TUN4 ]
+"1707
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f2520.h: 1707: typedef union {
+[u S65 `S66 1 `S67 1 ]
+[n S65 . . . ]
+"1722
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f2520.h: 1722: extern volatile OSCTUNEbits_t OSCTUNEbits __attribute__((address(0xF9B)));
+[v _OSCTUNEbits `VS65 ~T0 @X0 0 e@3995 ]
 "3697
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic18f2520.h: 3697: extern volatile unsigned char ADCON1 __attribute__((address(0xFC1)));
 [v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
@@ -679,90 +694,96 @@ Version 4.0 HI-TECH Software Intermediate Code
 "81
 [; ;main.c: 81:     OSCCON = 0b01110000;
 [e = _OSCCON -> -> 112 `i `uc ]
-"83
-[; ;main.c: 83:     ADCON1 = 0b00001111;
-[e = _ADCON1 -> -> 15 `i `uc ]
+"82
+[; ;main.c: 82:     OSCTUNEbits.PLLEN = 1;
+[e = . . _OSCTUNEbits 0 2 -> -> 1 `i `uc ]
 "84
-[; ;main.c: 84:     CMCON = 0b00000111;
+[; ;main.c: 84:     ADCON1 = 0b00001111;
+[e = _ADCON1 -> -> 15 `i `uc ]
+"85
+[; ;main.c: 85:     CMCON = 0b00000111;
 [e = _CMCON -> -> 7 `i `uc ]
-"86
-[; ;main.c: 86:     PORTA= 0b00000000;
-[e = _PORTA -> -> 0 `i `uc ]
 "87
-[; ;main.c: 87:     PORTB = 0b00000000;
-[e = _PORTB -> -> 0 `i `uc ]
+[; ;main.c: 87:     PORTA= 0b00000000;
+[e = _PORTA -> -> 0 `i `uc ]
 "88
-[; ;main.c: 88:     PORTC = 0b00000000;
+[; ;main.c: 88:     PORTB = 0b00000000;
+[e = _PORTB -> -> 0 `i `uc ]
+"89
+[; ;main.c: 89:     PORTC = 0b00000000;
 [e = _PORTC -> -> 0 `i `uc ]
-"90
-[; ;main.c: 90:     TRISA = 0b00000000;
-[e = _TRISA -> -> 0 `i `uc ]
 "91
-[; ;main.c: 91:     TRISB = 0b00000000;
-[e = _TRISB -> -> 0 `i `uc ]
+[; ;main.c: 91:     TRISA = 0b00000000;
+[e = _TRISA -> -> 0 `i `uc ]
 "92
-[; ;main.c: 92:     TRISC = 0b00000000;
+[; ;main.c: 92:     TRISB = 0b00000000;
+[e = _TRISB -> -> 0 `i `uc ]
+"93
+[; ;main.c: 93:     TRISC = 0b00000000;
 [e = _TRISC -> -> 0 `i `uc ]
-"94
-[; ;main.c: 94:     TXSTA = 0b00100110;
-[e = _TXSTA -> -> 38 `i `uc ]
 "95
-[; ;main.c: 95:     RCSTA = 0b10010000;
-[e = _RCSTA -> -> 144 `i `uc ]
+[; ;main.c: 95:     TXSTA = 0b00100110;
+[e = _TXSTA -> -> 38 `i `uc ]
 "96
-[; ;main.c: 96:     BAUDCON = 0b00001010;
-[e = _BAUDCON -> -> 10 `i `uc ]
+[; ;main.c: 96:     RCSTA = 0b10010000;
+[e = _RCSTA -> -> 144 `i `uc ]
 "97
-[; ;main.c: 97:     SPBRG = 16;
-[e = _SPBRG -> -> 16 `i `uc ]
+[; ;main.c: 97:     BAUDCON = 0b00001010;
+[e = _BAUDCON -> -> 10 `i `uc ]
 "98
-[; ;main.c: 98:     SPBRGH = 0;
-[e = _SPBRGH -> -> 0 `i `uc ]
+[; ;main.c: 98:     SPBRG = 16;
+[e = _SPBRG -> -> 16 `i `uc ]
+"99
+[; ;main.c: 99:     SPBRG = 68;
+[e = _SPBRG -> -> 68 `i `uc ]
 "100
-[; ;main.c: 100:     _delay((unsigned long)((10)*(8000000/4000.0)));
+[; ;main.c: 100:     SPBRGH = 0;
+[e = _SPBRGH -> -> 0 `i `uc ]
+"102
+[; ;main.c: 102:     _delay((unsigned long)((10)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"101
-[; ;main.c: 101: }
+"103
+[; ;main.c: 103: }
 [e :UE 266 ]
 }
-"103
-[; ;main.c: 103: void Long_delay_ms(unsigned int count)
+"105
+[; ;main.c: 105: void Long_delay_ms(unsigned int count)
 [v _Long_delay_ms `(v ~T0 @X0 1 ef1`ui ]
-"104
-[; ;main.c: 104: {
+"106
+[; ;main.c: 106: {
 {
 [e :U _Long_delay_ms ]
-"103
-[; ;main.c: 103: void Long_delay_ms(unsigned int count)
-[v _count `ui ~T0 @X0 1 r1 ]
-"104
-[; ;main.c: 104: {
-[f ]
 "105
-[; ;main.c: 105:     unsigned int i;
-[v _i `ui ~T0 @X0 1 a ]
+[; ;main.c: 105: void Long_delay_ms(unsigned int count)
+[v _count `ui ~T0 @X0 1 r1 ]
+"106
+[; ;main.c: 106: {
+[f ]
 "107
-[; ;main.c: 107:     for(i = 0; i < count; i ++)
+[; ;main.c: 107:     unsigned int i;
+[v _i `ui ~T0 @X0 1 a ]
+"109
+[; ;main.c: 109:     for(i = 0; i < count; i ++)
 {
 [e = _i -> -> 0 `i `ui ]
 [e $U 271  ]
 [e :U 268 ]
-"108
-[; ;main.c: 108:     {
-{
-"109
-[; ;main.c: 109:         _delay((unsigned long)((1)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "110
-[; ;main.c: 110:     }
+[; ;main.c: 110:     {
+{
+"111
+[; ;main.c: 111:         _delay((unsigned long)((1)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"112
+[; ;main.c: 112:     }
 }
 [e ++ _i -> -> 1 `i `ui ]
 [e :U 271 ]
 [e $ < _i _count 268  ]
 [e :U 269 ]
 }
-"111
-[; ;main.c: 111: }
+"113
+[; ;main.c: 113: }
 [e :UE 267 ]
 }
 [p f _sprintf 10518532 ]

@@ -4364,6 +4364,7 @@ void main()
 void System_init()
 {
     OSCCON = 0b01110000;
+    OSCTUNEbits.PLLEN = 1;
 
     ADCON1 = 0b00001111;
     CMCON = 0b00000111;
@@ -4380,6 +4381,7 @@ void System_init()
     RCSTA = 0b10010000;
     BAUDCON = 0b00001010;
     SPBRG = 16;
+    SPBRG = 68;
     SPBRGH = 0;
 
     _delay((unsigned long)((10)*(8000000/4000.0)));

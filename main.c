@@ -79,6 +79,7 @@ void main()
 void System_init()
 {
     OSCCON = 0b01110000; // 8MHZ INTOSC
+    OSCTUNEbits.PLLEN = 1;
     
     ADCON1 = 0b00001111; // Disable all analog channels
     CMCON = 0b00000111;
@@ -94,7 +95,8 @@ void System_init()
     TXSTA = 0b00100110;
     RCSTA = 0b10010000;
     BAUDCON = 0b00001010;
-    SPBRG = 16; // 115200 @ 8MHz.
+    //SPBRG = 16; // 115200 @ 8MHz.
+    SPBRG = 68; // 115200 @ 32MHz.
     SPBRGH = 0;
     
     __delay_ms(10);
