@@ -71,7 +71,7 @@ void main()
     if (nDevices == 0)
         putrsserial("No I2C devices found\n");
     else
-        putrsserial("Tesd done!\n");
+        putrsserial("Test done!\n");
     
     Long_delay_ms(5000); //wait 5 seconds for next scan
 }

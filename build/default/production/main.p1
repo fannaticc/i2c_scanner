@@ -673,7 +673,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 73:     else
 [e :U 264 ]
 "74
-[; ;main.c: 74:         putrsserial("Tesd done!\n");
+[; ;main.c: 74:         putrsserial("Test done!\n");
 [e ( _putrsserial (1 :s 12C ]
 [e :U 265 ]
 "76
@@ -730,9 +730,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "97
 [; ;main.c: 97:     BAUDCON = 0b00001010;
 [e = _BAUDCON -> -> 10 `i `uc ]
-"98
-[; ;main.c: 98:     SPBRG = 16;
-[e = _SPBRG -> -> 16 `i `uc ]
 "99
 [; ;main.c: 99:     SPBRG = 68;
 [e = _SPBRG -> -> 68 `i `uc ]
@@ -797,5 +794,5 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 1C 10 73 50 67 32 83 99 97 110 110 101 114 10 0 ]
 [a 11C 78 111 32 73 50 67 32 100 101 118 105 99 101 115 32 102 111 117 110 100 10 0 ]
 [a 2C 83 99 97 110 110 105 110 103 46 46 46 10 0 ]
-[a 12C 84 101 115 100 32 100 111 110 101 33 10 0 ]
+[a 12C 84 101 115 116 32 100 111 110 101 33 10 0 ]
 [a 7C 32 32 33 10 0 ]

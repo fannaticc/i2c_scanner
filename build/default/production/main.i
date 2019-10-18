@@ -4356,7 +4356,7 @@ void main()
     if (nDevices == 0)
         putrsserial("No I2C devices found\n");
     else
-        putrsserial("Tesd done!\n");
+        putrsserial("Test done!\n");
 
     Long_delay_ms(5000);
 }
@@ -4380,7 +4380,7 @@ void System_init()
     TXSTA = 0b00100110;
     RCSTA = 0b10010000;
     BAUDCON = 0b00001010;
-    SPBRG = 16;
+
     SPBRG = 68;
     SPBRGH = 0;
 
